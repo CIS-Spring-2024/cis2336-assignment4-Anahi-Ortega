@@ -80,7 +80,7 @@
                         <tr>
                             <td>Quinoa Stuffed Bell Peppers</td>
                             <td>$8.99</td>
-                            <td>1 Meal Swipe</td>
+                            <td>1</td>
                             <td>
                                 <input type="number" id="quantityPeppers" class="quantity-input" data-item="Quinoa Stuffed Bell Peppers" min="0" value="0">
                             </td>
@@ -88,7 +88,7 @@
                         <tr>
                             <td>Chickpea Curry Bowl</td>
                             <td>$7.99</td>
-                            <td>1 Meal Swipe</td>
+                            <td>1</td>
                             <td>
                                 <input type="number" id="quantityBowl" class="quantity-input" data-item="Chickpea Curry Bowl" min="0" value="0">
                             </td>
@@ -96,7 +96,7 @@
                         <tr>
                             <td>Eggplant Parmesan</td>
                             <td>$5.99</td>
-                            <td>1 Meal Swipe</td>
+                            <td>1</td>
                             <td>
                                 <input type="number" id="quantityParmesan" class="quantity-input" data-item="Eggplant Parmesan" min="0" value="0">
                             </td>
@@ -104,7 +104,7 @@
                         <tr>
                             <td>Roasted Vegetable Tart</td>
                             <td>$5.99</td>
-                            <td>1 Meal Swipe</td>
+                            <td>1</td>
                             <td>
                                 <input type="number" id="quantityTart" class="quantity-input" data-item="Roasted Vegetable Tart" min="0" value="0">
                             </td>
@@ -117,16 +117,45 @@
                         <input type="radio" id="mealSwipePayment" name="paymentMethod" value="mealSwipe">
                     </div>
                 </form>
-                <button onclick="submitForm()">Submit Order</button>
+                <button onclick="submitOrder();">Submit Order</button>
             </div>
         </div>
     </div>
     <script>
-        function submitForm(){
-            alert('Order Accepted!');
-            document.getElementById("orderForm").reset();
-            return false;
+        // function submitForm(){
+        //     alert('Order Accepted!');
+        //     document.getElementById("orderForm").reset();
+        //     return false;
+        // }
+        function submitOrder(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const orderData = {
+                'Quinoa Stuffed Bell Peppers': parseInt(document.getElementById('quantityPeppers').value),
+                'Chickpea Curry Bowl': parseInt(document.getElementById('quantityBowl').value),
+                'Eggplant Parmesan': parseInt(document.getElementById('quantityParmesan').value),
+                'Roasted Vegetable Tart': parseInt(document.getElementById('quantityTart').value)
+            };
+
+            // Send POST request to server
+            fetch('/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(orderData)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // Display the response from the server
+                document.getElementById("orderForm").reset(); // Reset the form
+            })
+            .catch(error => {
+                console.error('Error:', error); // Log any errors
+            });
         }
     </script>
+    <script src="../../js/server.js"></script>
 </body>
 </html>

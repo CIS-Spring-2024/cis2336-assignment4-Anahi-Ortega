@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/styles.css">
@@ -70,7 +71,32 @@
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Estimated Wait: </strong> <br><br>input graphics <br><br>
+                  <strong>Estimated Wait: </strong> 
+                  <canvas id="myChart" style="width: 100%; max-width: 700px;"></canvas>
+                  <script>
+                      var xValues = ['7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm','5:00pm'];
+                      var yValues = [7, 8, 10, 15, 10, 9, 10, 11, 10, 9, 7];
+                      
+                      new Chart("myChart", {
+                          type: "bar",
+                          data: {
+                              labels: xValues,
+                              datasets: [{
+                                  fill: false,
+                                  lineTension:0,
+                                  backgroundColor:"rgba(0,0,255,1.0)",
+                                  borderColor:"rgba(0,0,255,0.1)",
+                                  data:yValues
+                              }]
+                          },
+                          options: {
+                              legend: {display: false},
+                              scales: {
+                                  yAxis: {ticks:{ min: 6, max: 16 }}
+                              }
+                          }
+                      });
+                  </script>
                 </div>
               </div>
             </div>
@@ -82,7 +108,32 @@
               </h2>
               <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Estimated Wait: </strong> <br><br>input graphics <br><br>
+                  <strong>Estimated Wait: </strong> 
+                  <canvas id="myChart1" style="width: 100%; max-width: 700px;"></canvas>
+                  <script>
+                      var xValues1 = ['7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm','5:00pm'];
+                      var yValues1 = [7, 8, 7, 5, 10, 9, 10, 11, 7, 9, 7];
+                      
+                      new Chart("myChart1", {
+                          type: "bar",
+                          data: {
+                              labels: xValues1,
+                              datasets: [{
+                                  fill: false,
+                                  lineTension:0,
+                                  backgroundColor:"rgba(0,0,255,1.0)",
+                                  borderColor:"rgba(0,0,255,0.1)",
+                                  data:yValues1
+                              }]
+                          },
+                          options: {
+                              legend: {display: false},
+                              scales: {
+                                  yAxis: {ticks:{ min: 6, max: 16 }}
+                              }
+                          }
+                      });
+                  </script>
                 </div>
               </div>
             </div>
@@ -94,7 +145,32 @@
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Estimated Wait: </strong> <br><br>input graphics <br><br>
+                  <strong>Estimated Wait: </strong> 
+                  <canvas id="myChart2" style="width: 100%; max-width: 700px;"></canvas>
+                  <script>
+                      var xValues2 = ['7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm','5:00pm'];
+                      var yValues2 = [4, 8, 10, 15, 4, 9, 4, 11, 10, 9, 7];
+                      
+                      new Chart("myChart2", {
+                          type: "bar",
+                          data: {
+                              labels: xValues2,
+                              datasets: [{
+                                  fill: false,
+                                  lineTension:0,
+                                  backgroundColor:"rgba(0,0,255,1.0)",
+                                  borderColor:"rgba(0,0,255,0.1)",
+                                  data:yValues2
+                              }]
+                          },
+                          options: {
+                              legend: {display: false},
+                              scales: {
+                                  yAxis: {ticks:{ min: 6, max: 16 }}
+                              }
+                          }
+                      });
+                  </script>
                 </div>
               </div>
             </div>
@@ -106,7 +182,32 @@
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Estimated Wait: </strong> <br><br>input graphics <br><br>
+                  <strong>Estimated Wait: </strong> 
+                  <canvas id="myChart3" style="width: 100%; max-width: 700px;"></canvas>
+                  <script>
+                      var xValues3 = ['7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm','5:00pm'];
+                      var yValues3 = [7, 8, 1, 1, 1, 9, 1, 1, 10, 9, 7];
+                      
+                      new Chart("myChart3", {
+                          type: "bar",
+                          data: {
+                              labels: xValues3,
+                              datasets: [{
+                                  fill: false,
+                                  lineTension:0,
+                                  backgroundColor:"rgba(0,0,255,1.0)",
+                                  borderColor:"rgba(0,0,255,0.1)",
+                                  data:yValues3
+                              }]
+                          },
+                          options: {
+                              legend: {display: false},
+                              scales: {
+                                  yAxis: {ticks:{ min: 6, max: 16 }}
+                              }
+                          }
+                      });
+                  </script>
                 </div>
               </div>
             </div>
@@ -118,7 +219,32 @@
               </h2>
               <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Estimated Wait: </strong> <br><br>input graphics <br><br>
+                  <strong>Estimated Wait: </strong> 
+                  <canvas id="myChart4" style="width: 100%; max-width: 700px;"></canvas>
+                  <script>
+                      var xValues4 = ['7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm','5:00pm'];
+                      var yValues4 = [3, 5, 7, 5, 4, 2, 10, 11, 10, 9, 7];
+                      
+                      new Chart("myChart4", {
+                          type: "bar",
+                          data: {
+                              labels: xValues4,
+                              datasets: [{
+                                  fill: false,
+                                  lineTension:0,
+                                  backgroundColor:"rgba(0,0,255,1.0)",
+                                  borderColor:"rgba(0,0,255,0.1)",
+                                  data:yValues4
+                              }]
+                          },
+                          options: {
+                              legend: {display: false},
+                              scales: {
+                                  yAxis: {ticks:{ min: 6, max: 16 }}
+                              }
+                          }
+                      });
+                  </script>
                 </div>
               </div>
             </div>
@@ -130,7 +256,32 @@
               </h2>
               <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>Estimated Wait:</strong> <br><br>input graphics <br><br>
+                  <strong>Estimated Wait:</strong> 
+                  <canvas id="myChart5" style="width: 100%; max-width: 700px;"></canvas>
+                  <script>
+                      var xValues5 = ['7:00am', '8:00am', '9:00am', '10:00am', '11:00am', '12:00pm', '1:00pm', '2:00pm', '3:00pm', '4:00pm','5:00pm'];
+                      var yValues5 = [3, 4, 5, 5, 6, 7, 6, 7, 6, 5, 4];
+                      
+                      new Chart("myChart5", {
+                          type: "bar",
+                          data: {
+                              labels: xValues5,
+                              datasets: [{
+                                  fill: false,
+                                  lineTension:0,
+                                  backgroundColor:"rgba(0,0,255,1.0)",
+                                  borderColor:"rgba(0,0,255,0.1)",
+                                  data:yValues5
+                              }]
+                          },
+                          options: {
+                              legend: {display: false},
+                              scales: {
+                                  yAxis: {ticks:{ min: 6, max: 16 }}
+                              }
+                          }
+                      });
+                  </script>
                 </div>
               </div>
             </div>
@@ -178,64 +329,71 @@
                       <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <div class="col-3">
-                              <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="col-5">
-                              <div class="carousel-caption">
-                                <strong>Chicken</strong>
-                                <ul>
-                                    <li>Chicken breast pieces</li>
-                                    <li>Spicy marinade (including ingredients such as cayenne pepper, chili powder, paprika, garlic powder, and crushed red pepper flakes)</li>
-                                    <li>Olive oil (for cooking)</li>
-                                    <li>Optional garnishes: sliced green onions, chopped cilantro, lime wedges</li>
-                                </ul>
-                                <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
+                            <div class="row">
+                              <div class="col-3">
+                                <img src="../images/spicy-chicken.jpg" class="d-block w-100" alt="...">
+                              </div>
+                              <div class="col-5">
+                                <div class="carousel-caption">
+                                  <strong>Chicken</strong>
+                                  <p>Prepare to tantalize your taste buds with our Spicy Chicken! Succulent chicken breast pieces are marinated in a fiery blend of spices, delivering a mouthwatering kick of heat with every bite. Served sizzling hot and seasoned to perfection, our Spicy Chicken is the perfect combination of flavor and spice. Pair it with your favorite sides for a deliciously satisfying meal that will leave you craving more!</p>
+                                </div>
                               </div>
                             </div>
                           </div>
                           <div class="carousel-item">
                             <div class="col-3">
-                              <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                              <img src="../images/spicy-burg.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-5">
                               <div class="carousel-caption">
                                 <strong>Burger</strong>
                                   <ul>
-                                    <li>thing one</li>
-                                    <li>thing two</li>
+                                    <li>Beef patty seasoned with cayenne pepper, chili powder, paprika, and garlic powder</li>
+                                    <li>Pepper jack cheese</li>
+                                    <li>Fresh lettuce leaves</li>
+                                    <li>Sliced ripe tomatoes</li>
+                                    <li>Sliced jalapenos</li>
+                                    <li>Brioche bun</li>
                                   </ul>
-                                  <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                               </div>
                             </div>
                           </div>
                           <div class="carousel-item">
                             <div class="col-3">
-                              <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                              <img src="../images/spicy-noodles.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-5">
                               <div class="carousel-caption">
                                 <strong>Noodles</strong>
                                 <ul>
-                                  <li>thing one</li>
-                                  <li>thing two</li>
+                                  <li>Noodles (such as ramen, udon, or rice noodles)</li>
+                                  <li>Spicy sauce (including ingredients such as chili paste, garlic, ginger, soy sauce, and sesame oil)</li>
+                                  <li>Optional protein (such as chicken, beef, tofu, or shrimp)</li>
+                                  <li>Fresh vegetables (such as bell peppers, carrots, and cabbage)</li>
+                                  <li>Garnishes: sliced scallions, chopped cilantro, lime wedges</li>
                                 </ul>
-                                <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                               </div>
                             </div>
                           </div>
                           <div class="carousel-item">
                               <div class="col-3">
-                                  <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                  <img src="../images/spicy-soup.jpg" class="d-block w-100" alt="...">
                               </div>
                               <div class="col-5">
                                 <div class="carousel-caption">
                                   <strong>Soup</strong>
                                   <ul>
-                                    <li>thing one</li>
-                                    <li>thing two</li>
+                                    <li>Chicken broth</li>
+                                    <li>Chili peppers (such as jalapenos, Thai chilies, or serrano peppers)</li>
+                                    <li>Garlic</li>
+                                    <li>Ginger</li>
+                                    <li>Soy sauce</li>
+                                    <li>Chicken breast or thigh, thinly sliced</li>
+                                    <li>Assorted vegetables (such as bok choy, carrots, and mushrooms)</li>
+                                    <li>Noodles (such as rice noodles or egg noodles)</li>
+                                    <li>Garnishes: fresh cilantro, lime wedges</li>
                                   </ul>
-                                  <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                 </div>
                               </div>
                           </div>
@@ -265,63 +423,89 @@
                               <div class="carousel-inner">
                                   <div class="carousel-item active">
                                       <div class="col-3">
-                                          <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                          <img src="../images/salad.jpg" class="d-block w-100" alt="...">
                                       </div>
                                       <div class="col-5">
                                           <div class="carousel-caption">
-                                              <strong>Chicken</strong>
+                                              <strong>Urban Spoon Signature Salad</strong>
                                               <ul>
-                                                  <li>Chicken breast pieces</li>
-                                                  <li>Spicy marinade (including ingredients such as cayenne pepper, chili powder, paprika, garlic powder, and crushed red pepper flakes)</li>
-                                                  <li>Olive oil (for cooking)</li>
-                                                  <li>Optional garnishes: sliced green onions, chopped cilantro, lime wedges</li>
+                                                  <li>Mixed greens (lettuce, spinach, arugula, etc.)</li>
+                                                  <li>Cherry tomatoes</li>
+                                                  <li>Cucumber</li>
+                                                  <li>Carrots</li>
+                                                  <li>Avocado</li>
+                                                  <li>Grilled chicken breast</li>
+                                                  <li>Feta cheese</li>
+                                                  <li>Balsamic vinaigrette</li>
+                                                  <li>Garlic breadsticks</li>
                                               </ul>
-                                              <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="carousel-item">
                                       <div class="col-3">
-                                          <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                          <img src="../images/salmon.jpg" class="d-block w-100" alt="...">
                                       </div>
                                       <div class="col-5">
                                           <div class="carousel-caption">
-                                              <strong>Burger</strong>
+                                              <strong>Grilled Salmon with Lemon Herb Butter</strong>
                                               <ul>
-                                                  <li>thing one</li>
-                                                  <li>thing two</li>
+                                                  <li>Salmon fillets</li>
+                                                  <li>Fresh herbs (such as parsley, dill, and thyme)</li>
+                                                  <li>Butter</li>
+                                                  <li>Lemon</li>
+                                                  <li>Salt</li>
+                                                  <li>Pepper</li>
+                                                  <li>Asparagus</li>
+                                                  <li>Potatoes</li>
+                                                  <li>Garlic</li>
                                               </ul>
-                                              <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="carousel-item">
                                       <div class="col-3">
-                                          <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                          <img src="../images/stir-fry.jpg" class="d-block w-100" alt="...">
                                       </div>
                                       <div class="col-5">
                                           <div class="carousel-caption">
-                                              <strong>Noodles</strong>
+                                              <strong>Urban Spoon Veggie Stir-Fry</strong>
                                               <ul>
-                                                  <li>thing one</li>
-                                                  <li>thing two</li>
+                                                  <li>Assorted vegetables (bell peppers, broccoli, snow peas, carrots, mushrooms, etc.)</li>
+                                                  <li>Ginger</li>
+                                                  <li>Soy sauce</li>
+                                                  <li>Sesame oil</li>
+                                                  <li>Garlic</li>
+                                                  <li>Jasmine rice</li>
+                                                  <li>Sesame seeds</li>
+                                                  <li>Green onions</li>
                                               </ul>
-                                              <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                           </div>
                                       </div>
                                   </div>
                                   <div class="carousel-item">
                                       <div class="col-3">
-                                          <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                          <img src="../images/lasagna.jpg" class="d-block w-100" alt="...">
                                       </div>
                                       <div class="col-5">
                                           <div class="carousel-caption">
-                                              <strong>Soup</strong>
+                                              <strong>Classic Beef Lasagna</strong>
                                               <ul>
-                                                  <li>thing one</li>
-                                                  <li>thing two</li>
+                                                  <li>Lasagna noodles</li>
+                                                  <li>Marinara sauce</li>
+                                                  <li>Ground beef</li>
+                                                  <li>Ricotta cheese</li>
+                                                  <li>Mozzarella cheese</li>
+                                                  <li>Parmesan cheese</li>
+                                                  <li>Eggs</li>
+                                                  <li>Onion</li>
+                                                  <li>Garlic</li>
+                                                  <li>Italian seasoning</li>
+                                                  <li>Olive oil</li>
+                                                  <li>Salad ingredients (lettuce, tomatoes, etc.)</li>
+                                                  <li>Balsamic vinaigrette</li>
+                                                  <li>Bread for garlic bread</li>
                                               </ul>
-                                              <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                           </div>
                                       </div>
                                   </div>
@@ -351,18 +535,27 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="col-3">
-                                        <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                        <img src="../images/seafood_paella.jpg" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="col-5">
                                         <div class="carousel-caption">
-                                            <strong>Chicken</strong>
+                                            <strong>Palatial Seafood Paella</strong>
                                             <ul>
-                                                <li>Chicken breast pieces</li>
-                                                <li>Spicy marinade (including ingredients such as cayenne pepper, chili powder, paprika, garlic powder, and crushed red pepper flakes)</li>
-                                                <li>Olive oil (for cooking)</li>
-                                                <li>Optional garnishes: sliced green onions, chopped cilantro, lime wedges</li>
+                                                <li>Arborio rice</li>
+                                                <li>Shrimp</li>
+                                                <li>Mussels</li>
+                                                <li>Calamari</li>
+                                                <li>Bell peppers</li>
+                                                <li>Onions</li>
+                                                <li>Peas</li>
+                                                <li>Tomatoes</li>
+                                                <li>Garlic</li>
+                                                <li>Saffron</li>
+                                                <li>Vegetable broth</li>
+                                                <li>Olive oil</li>
+                                                <li>White wine</li>
+                                                <li>Lemon wedges (for garnish)</li>
                                             </ul>
-                                            <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                         </div>
                                     </div>
                                 </div>
@@ -372,42 +565,73 @@
                                     </div>
                                     <div class="col-5">
                                         <div class="carousel-caption">
-                                            <strong>Burger</strong>
+                                            <strong>Savory Chicken Marsala</strong>
                                             <ul>
-                                                <li>thing one</li>
-                                                <li>thing two</li>
+                                                <li>Chicken breasts</li>
+                                                <li>Marsala wine</li>
+                                                <li>Mushrooms</li>
+                                                <li>Shallots</li>
+                                                <li>Chicken broth</li>
+                                                <li>Flour</li>
+                                                <li>Butter</li>
+                                                <li>Heavy cream</li>
+                                                <li>Potatoes</li>
+                                                <li>Green beans</li>
+                                                <li>Garlic</li>
+                                                <li>Olive oil</li>
+                                                <li>Salt</li>
+                                                <li>Pepper</li>
                                             </ul>
-                                            <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="col-3">
-                                        <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                        <img src="../images/coconut_curry_bowl.jpg" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="col-5">
                                         <div class="carousel-caption">
-                                            <strong>Noodles</strong>
+                                            <strong>Exotic Coconut Curry Bowl</strong>
                                             <ul>
-                                                <li>thing one</li>
-                                                <li>thing two</li>
+                                                <li>Jasmine rice</li>
+                                                <li>Chicken breast</li>
+                                                <li>Coconut milk</li>
+                                                <li>Red curry paste</li>
+                                                <li>Lemongrass</li>
+                                                <li>Ginger</li>
+                                                <li>Garlic</li>
+                                                <li>Carrots</li>
+                                                <li>Broccoli</li>
+                                                <li>Red bell pepper</li>
+                                                <li>Thai basil</li>
+                                                <li>Fish sauce</li>
+                                                <li>Lime</li>
+                                                <li>Vegetable oil</li>
                                             </ul>
-                                            <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="carousel-item">
                                     <div class="col-3">
-                                        <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                        <img src="../images/mushroom_risotto.jpg" class="d-block w-100" alt="...">
                                     </div>
                                     <div class="col-5">
                                         <div class="carousel-caption">
-                                            <strong>Soup</strong>
+                                            <strong>Gourmet Mushroom Risotto</strong>
                                             <ul>
-                                                <li>thing one</li>
-                                                <li>thing two</li>
+                                                <li>Arborio rice</li>
+                                                <li>Assorted wild mushrooms (such as shiitake, cremini, and oyster)</li>
+                                                <li>Shallots</li>
+                                                <li>Garlic</li>
+                                                <li>Vegetable broth</li>
+                                                <li>White wine</li>
+                                                <li>Butter</li>
+                                                <li>Olive oil</li>
+                                                <li>Parmesan cheese</li>
+                                                <li>Parsley (for garnish)</li>
+                                                <li>Salt</li>
+                                                <li>Pepper</li>
                                             </ul>
-                                            <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                         </div>
                                     </div>
                                 </div>
@@ -437,18 +661,23 @@
                           <div class="carousel-inner">
                               <div class="carousel-item active">
                                   <div class="col-3">
-                                      <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                      <img src="../images/smoked_salmon_benedict.jpg" class="d-block w-100" alt="...">
                                   </div>
                                   <div class="col-5">
                                       <div class="carousel-caption">
-                                          <strong>Chicken</strong>
+                                          <strong>Smoked Salmon Benedict</strong>
                                           <ul>
-                                              <li>Chicken breast pieces</li>
-                                              <li>Spicy marinade (including ingredients such as cayenne pepper, chili powder, paprika, garlic powder, and crushed red pepper flakes)</li>
-                                              <li>Olive oil (for cooking)</li>
-                                              <li>Optional garnishes: sliced green onions, chopped cilantro, lime wedges</li>
+                                              <li>Smoked salmon</li>
+                                              <li>English muffins</li>
+                                              <li>Poached eggs</li>
+                                              <li>Hollandaise sauce</li>
+                                              <li>Potatoes</li>
+                                              <li>Butter</li>
+                                              <li>Fresh herbs (such as chives or dill)</li>
+                                              <li>Salt</li>
+                                              <li>Pepper</li>
+                                              <li>Fresh fruit (such as berries and melon)</li>
                                           </ul>
-                                          <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                       </div>
                                   </div>
                               </div>
@@ -458,12 +687,20 @@
                                   </div>
                                   <div class="col-5">
                                       <div class="carousel-caption">
-                                          <strong>Burger</strong>
+                                          <strong>Grilled Vegetable Panini</strong>
                                           <ul>
-                                              <li>thing one</li>
-                                              <li>thing two</li>
+                                              <li>Zucchini</li>
+                                              <li>Bell peppers</li>
+                                              <li>Eggplant</li>
+                                              <li>Ciabatta bread</li>
+                                              <li>Goat cheese</li>
+                                              <li>Balsamic glaze</li>
+                                              <li>Olive oil</li>
+                                              <li>Garlic</li>
+                                              <li>Fresh basil</li>
+                                              <li>Salt</li>
+                                              <li>Pepper</li>
                                           </ul>
-                                          <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                       </div>
                                   </div>
                               </div>
@@ -478,7 +715,6 @@
                                               <li>thing one</li>
                                               <li>thing two</li>
                                           </ul>
-                                          <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                       </div>
                                   </div>
                               </div>
@@ -493,7 +729,6 @@
                                               <li>thing one</li>
                                               <li>thing two</li>
                                           </ul>
-                                          <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
                                       </div>
                                   </div>
                               </div>
@@ -523,7 +758,7 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <div class="col-3">
-                                    <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/spicy-chicken.jpg" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="col-5">
                                     <div class="carousel-caption">
@@ -534,52 +769,66 @@
                                             <li>Olive oil (for cooking)</li>
                                             <li>Optional garnishes: sliced green onions, chopped cilantro, lime wedges</li>
                                         </ul>
-                                        <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
+                                        <p>Prepare to tantalize your taste buds with our Spicy Chicken! Succulent chicken breast pieces are marinated in a fiery blend of spices, delivering a mouthwatering kick of heat with every bite. Served sizzling hot and seasoned to perfection, our Spicy Chicken is the perfect combination of flavor and spice. Pair it with your favorite sides for a deliciously satisfying meal that will leave you craving more!</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="col-3">
-                                    <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/spicy-burg.jpg" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="col-5">
                                     <div class="carousel-caption">
                                         <strong>Burger</strong>
                                         <ul>
-                                            <li>thing one</li>
-                                            <li>thing two</li>
+                                          <li>Beef patty seasoned with cayenne pepper, chili powder, paprika, and garlic powder</li>
+                                          <li>Pepper jack cheese</li>
+                                          <li>Fresh lettuce leaves</li>
+                                          <li>Sliced ripe tomatoes</li>
+                                          <li>Sliced jalapenos</li>
+                                          <li>Brioche bun</li>
                                         </ul>
-                                        <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
+                                        <p>Indulge in a fiery explosion of flavors with our Spicy Burger! Savor the perfect balance of heat and juiciness in every bite. Our succulent beef patty is infused with a tantalizing blend of spices, creating a mouthwatering sensation that will leave your taste buds tingling with delight. Topped with melted pepper jack cheese, crisp lettuce, ripe tomatoes, and zesty jalapeno slices, all nestled between a toasted brioche bun, this burger is a spicy sensation you won't want to miss!</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="col-3">
-                                    <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/spicy-noodles.jpg" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="col-5">
                                     <div class="carousel-caption">
                                         <strong>Noodles</strong>
                                         <ul>
-                                            <li>thing one</li>
-                                            <li>thing two</li>
+                                          <li>Noodles (such as ramen, udon, or rice noodles)</li>
+                                          <li>Spicy sauce (including ingredients such as chili paste, garlic, ginger, soy sauce, and sesame oil)</li>
+                                          <li>Optional protein (such as chicken, beef, tofu, or shrimp)</li>
+                                          <li>Fresh vegetables (such as bell peppers, carrots, and cabbage)</li>
+                                          <li>Garnishes: sliced scallions, chopped cilantro, lime wedges</li>          
                                         </ul>
-                                        <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
-                                    </div>
+                                        <p>Embark on a culinary journey with our Spicy Noodle Delight! Dive into a steaming bowl of tender noodles bathed in a rich and fiery sauce, packed with bold flavors that will ignite your senses. Infused with a tantalizing blend of chili paste, garlic, ginger, and soy sauce, our Spicy Noodle Delight is a symphony of spice and satisfaction. Topped with fresh scallions, cilantro, and a squeeze of lime for a burst of freshness, this dish is sure to leave you craving for more!</p>
+                                      </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="col-3">
-                                    <img src="../images/chicken_marsala.jpg" class="d-block w-100" alt="...">
+                                    <img src="../images/spicy-soup.jpg" class="d-block w-100" alt="...">
                                 </div>
                                 <div class="col-5">
                                     <div class="carousel-caption">
                                         <strong>Soup</strong>
                                         <ul>
-                                            <li>thing one</li>
-                                            <li>thing two</li>
+                                          <li>Chicken broth</li>
+                                          <li>Chili peppers (such as jalapenos, Thai chilies, or serrano peppers)</li>
+                                          <li>Garlic</li>
+                                          <li>Ginger</li>
+                                          <li>Soy sauce</li>
+                                          <li>Chicken breast or thigh, thinly sliced</li>
+                                          <li>Assorted vegetables (such as bok choy, carrots, and mushrooms)</li>
+                                          <li>Noodles (such as rice noodles or egg noodles)</li>
+                                          <li>Garnishes: fresh cilantro, lime wedges</li>
                                         </ul>
-                                        <p>Ingredients: Ingredient One, Ingredient Two, Ingredient Three</p>
+                                        <p>Experience a culinary adventure with our Spicy Soup Sensation! Delight in the comforting warmth of a steaming bowl of soup infused with bold spices that awaken your taste buds. Our Spicy Soup is a symphony of flavors, featuring a fragrant broth simmered to perfection with fiery chili peppers, aromatic garlic, zesty ginger, and savory soy sauce. Loaded with tender chicken pieces, hearty vegetables, and slurp-worthy noodles, each spoonful promises a burst of warmth and spice. Garnished with fresh cilantro and a squeeze of lime for a refreshing finish, this soup is an unforgettable journey for your palate.</p>
                                     </div>
                                 </div>
                             </div>
