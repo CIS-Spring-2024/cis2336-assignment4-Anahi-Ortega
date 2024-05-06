@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Navbar</title>
+    <style>
+        .navbar {
+    background-color: #333;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #8a2727;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Menu</a>
+                <div class="dropdown-content">
+                    <a href="order/sprice-symph-grill-order.html">Spice Symphony Grill</a>
+                    <a href="order/urban-spoon-order.html">Urban Spoon</a>
+                    <a href="order/the-palate-pavillion-order.html">The Patate Pavillion</a>
+                    <a href="order/ember-and-sage-order.html">Ember and Sage</a>
+                    <a href="order/best-harvest-kitchen-order.html">Best Harvest Kitchen</a>
+                    <a href="order/fusion-heat-order.html">Fusion Heat</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Hours and Location</a>
+                <div class="dropdown-content">
+                    <a href="#">Hours and Map</a>
+                    <a href="#">Holiday Hours</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">Food Insecurity</a>
+                <div class="dropdown-content">
+                    <a href="https://uh.edu/csac/cougar-cupboard/">Cougar Cupboard</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">About Us</a>
+                <div class="dropdown-content">
+                    <a href="#">Mission</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Sustainability</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">More</a>
+                <div class="dropdown-content">
+                    <a href="https://dineoncampus.com/uh/meal-plan-eligibility">Meal Plans</a>
+                    <a href="https://www.uh.edu/af-university-services/cougarcard/">Cougar Cards</a>
+                    <a href="#">Printable Materials</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+</html>

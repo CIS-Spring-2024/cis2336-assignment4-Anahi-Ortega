@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>Order - Urban Spoon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/cart.js"></script>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>UH Dining | Sugarland</h1>
+        <nav class="navbar">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="#">Menu</a>
+              <div class="dropdown-content">
+                <a href="sprice-symph-grill-order.html">Spice Symphony Grill</a>
+                <a href="urban-spoon-order.html">Urban Spoon</a>
+                <a href="the-palate-pavillion-order.html">The Patate Pavillion</a>
+                <a href="ember-and-sage-order.html">Ember and Sage</a>
+                <a href="best-harvest-kitchen-order.html">Best Harvest Kitchen</a>
+                <a href="fusion-heat-order.html">Fusion Heat</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Hours and Location</a>
+              <div class="dropdown-content">
+                <a href="../Hours-and-Location.html">Hours and Map</a>
+                <a href="#">Holiday Hours</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">Food Insecurity</a>
+              <div class="dropdown-content">
+                <a href="https://uh.edu/csac/cougar-cupboard/">Cougar Cupboard</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">About Us</a>
+              <div class="dropdown-content">
+                <a href="#">Mission</a>
+                <a href="#">Careers</a>
+                <a href="#">Sustainability</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a href="#">More</a>
+              <div class="dropdown-content">
+                <a href="https://dineoncampus.com/uh/meal-plan-eligibility">Meal Plans</a>
+                <a href="https://www.uh.edu/af-university-services/cougarcard/">Cougar Cards</a>
+                <a href="#">Printable Materials</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+    </div>
+    <h1>Urban Spoon</h1>
+    <div class="row">
+        <div class="col-4">
+            <div class="container">
+                <h2>Cart</h2>
+                <strong>Order</strong>
+                <ul id="cartItems"></ul>
+                <p id="totalAmount">Total:</p>
+                <p id="totalMealSwipes">Total Meal Swipes:</p>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="container">
+                <h2>Menu</h2>
+                <table>
+                    <tr>
+                        <th class="col-7">Food Item</th>
+                        <th class="col-2">Price</th>
+                        <th class="col-2">Meal Swipes</th>
+                        <th class="col-1">Quantity</th>
+                    </tr>
+                    <tr>
+                        <td>Urban Spoon Signature Salad</td>
+                        <td>$5.99</td>
+                        <td>1</td>
+                        <td>
+                            <input type="number" id="quantitySalad" class="quantity-input" data-item="Urban Spoon Signature Salad" min="0" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Grilled Salmon with Lemon Herb Butter</td>
+                        <td>$7.99</td>
+                        <td>1</td>
+                        <td>
+                            <input type="number" id="quantitySalmon" class="quantity-input" data-item="Grilled Salmon with Lemon Herb Butter" min="0" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Urban Spoon Veggie Stir Fry</td>
+                        <td>$8.99</td>
+                        <td>1</td>
+                        <td>
+                            <input type="number" id="quantityStirFry" class="quantity-input" data-item="Urban Spoon Veggie Stir Fry" min="0" value="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Classic Beef Lasagna</td>
+                        <td>$6.99</td>
+                        <td>1</td>
+                        <td>
+                            <input type="number" id="quantityLasagna" class="quantity-input" data-item="Classic Beef Lasagna" min="0" value="0">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div>
+        <label for="cardPayment">Card</label>
+        <input type="radio" id="cardPayment" name="paymentMethod" value="card">
+        <label for="mealSwipePayment">Meal Swipes</label>
+        <input type="radio" id="mealSwipePayment" name="paymentMethod" value="mealSwipe">
+    </div>
+</body>
+</html>
